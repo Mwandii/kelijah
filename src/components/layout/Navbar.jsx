@@ -128,7 +128,7 @@ const Navbar = () => {
         role="banner"
         className={[
           'fixed top-0 left-0 right-0 z-50 h-[66px]',
-          'transition-[background,border,backdrop-filter] duration-350',
+          'transition-[background,border,backdrop-filter] duration-300',
           scrolled
             ? 'bg-[rgba(12,12,12,0.97)] backdrop-blur-md border-b border-white/[0.06]'
             : 'bg-transparent',

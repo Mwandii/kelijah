@@ -44,15 +44,6 @@
   --transition-slow: 350ms ease;
 }
 
-/* ── 3. Base Resets ────────────────────────────────────────── */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
@@ -73,11 +64,6 @@ img,
 video {
   max-width: 100%;
   display: block;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 button {

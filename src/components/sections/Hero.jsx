@@ -40,7 +40,7 @@ const ArrowRight = () => (
 );
 
 // ── Hero image — replace with client photo ────────────────────
-const HERO_IMAGE = "https://images.unsplash.com/photo-1568844293986-ca9c5c524285?w=1800&q=85";
+const HERO_IMAGE = "https://images.unsplash.com/photo-1551522435-a13afa10f103?w=1600&auto=format&fit=crop&q=80&ixlib=rb-4.1.0";
 
 // ── Component ─────────────────────────────────────────────────
 const Hero = () => {
@@ -67,7 +67,7 @@ const Hero = () => {
       {/* ── Dark gradient overlay ── */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-r from-[rgba(12,12,12,0.95)] via-[rgba(12,12,12,0.75)] to-[rgba(12,12,12,0.25)] lg:from-[rgba(12,12,12,0.93)] lg:via-[rgba(12,12,12,0.65)] lg:to-[rgba(12,12,12,0.15)]"
+        className="absolute inset-0 bg-linear-to-r from-[rgba(12,12,12,0.95)] via-[rgba(12,12,12,0.75)] to-[rgba(12,12,12,0.25)] lg:from-[rgba(12,12,12,0.93)] lg:via-[rgba(12,12,12,0.65)] lg:to-[rgba(12,12,12,0.15)]"
       />
 
       {/* ── Bottom red gradient fade ── */}
