@@ -19,6 +19,7 @@ import HowItWorks from './components/sections/HowItWorks';
 import Testimonials from './components/sections/Testimonials';
 import CtaStrip from './components/sections/CtaStrip';
 import Location from './components/sections/Location';
+import Footer from './components/layout/Footer';
 
 const App = () => (
   <BrowserRouter>
@@ -33,6 +34,7 @@ const App = () => (
     <Testimonials/>
     <CtaStrip/>
     <Location/>
+    <Footer/>
     {/* ── Add sections below as they are built ── */}
   </BrowserRouter>
 );
