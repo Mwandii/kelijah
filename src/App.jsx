@@ -19,8 +19,8 @@ import Footer  from './components/layout/Footer';
 import Home    from './pages/Home';
 
 // ── Pages — uncomment as they are built ──────────────────────
-// import Services         from './pages/Services';
-// import ServiceDetail    from './pages/ServiceDetail';
+import Services         from './pages/Services';
+import ServiceDetail    from './pages/ServiceDetail';
 // import BookAppointment  from './pages/BookAppointment';
 
 // ── ScrollToTop ───────────────────────────────────────────────
@@ -64,28 +64,10 @@ const App = () => (
         <Route path="/" element={<Home />} />
 
         {/* Services listing page */}
-        <Route
-          path="/services"
-          element={
-            <main id="main-content" className="min-h-screen bg-[var(--color-black)] flex items-center justify-center">
-              <p className="text-white/30 font-[family-name:var(--font-display)] text-xl tracking-widest uppercase">
-                Services page — coming soon
-              </p>
-            </main>
-          }
-        />
+        <Route path="/services" element={<Services />} />
 
         {/* Service detail — dynamic slug */}
-        <Route
-          path="/services/:slug"
-          element={
-            <main id="main-content" className="min-h-screen bg-[var(--color-black)] flex items-center justify-center">
-              <p className="text-white/30 font-[family-name:var(--font-display)] text-xl tracking-widest uppercase">
-                Service detail — coming soon
-              </p>
-            </main>
-          }
-        />
+        <Route path="/services/:slug" element={<ServiceDetail />} />
 
         {/* Book appointment */}
         <Route
