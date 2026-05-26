@@ -63,7 +63,7 @@ const BackArrow = () => (
 
 // ── FAQ Accordion Item ────────────────────────────────────────
 const FaqItem = ({ faq, isOpen, onToggle }) => (
-  <div className="border-b border-white/[0.08] last:border-0">
+  <div className="border-b border-white/8 last:border-0">
     <button
       type="button"
       onClick={onToggle}
@@ -139,19 +139,21 @@ const ServiceDetail = () => {
       {/* ── Hero banner ── */}
       <section
         aria-label={`${service.fullTitle} service header`}
-        className="relative bg-[var(--color-black)] pt-[66px] overflow-hidden min-h-[320px] sm:min-h-[360px] flex flex-col justify-end"
+        className="relative bg-[var(--color-black)] pt-[66px] overflow-hidden md:h-175 md:min-h-155 sm:min-h-90 flex flex-col justify-end"
       >
         {/* Background image */}
         <LazyImage
           src={service.image}
           alt={service.fullTitle}
           wrapClass="absolute inset-0"
+          objectFit="cover"
+  objectPos="center center"
           eager
         />
         {/* Overlay */}
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-r from-[rgba(12,12,12,0.95)] via-[rgba(12,12,12,0.75)] to-[rgba(12,12,12,0.3)]"
+          className="absolute inset-0 bg-linear-to-r from-[rgba(12,12,12,0.95)] via-[rgba(12,12,12,0.75)] to-[rgba(12,12,12,0.3)]"
         />
         {/* Red left accent */}
         <div
@@ -175,7 +177,7 @@ const ServiceDetail = () => {
 
           {/* Title */}
           <h1
-            className="font-[family-name:var(--font-display)] font-bold text-white uppercase leading-[0.95] tracking-[0.01em] max-w-[700px]"
+            className="font-[family-name:var(--font-display)] font-bold text-white uppercase leading-[0.95] tracking-[0.01em] max-w-175"
             style={{ fontSize: 'clamp(28px, 4.5vw, 52px)' }}
           >
             {service.fullTitle}
@@ -215,7 +217,7 @@ const ServiceDetail = () => {
 
               {/* Book CTA inline — mobile only (sidebar handles desktop) */}
               <FadeIn direction="up" delay={140}>
-                <div className="lg:hidden bg-[#111] border border-white/[0.08] rounded-lg p-6 mb-12">
+                <div className="lg:hidden bg-[#111] border border-white/8 rounded-lg p-6 mb-12">
                   <p className="font-[family-name:var(--font-display)] font-bold text-[18px] text-white uppercase tracking-[0.02em] mb-2">
                     Book This Service
                   </p>
@@ -243,7 +245,7 @@ const ServiceDetail = () => {
               <FadeIn direction="up" delay={180}>
                 <div>
                   <Overline>Frequently Asked Questions</Overline>
-                  <div className="bg-[#111] border border-white/[0.08] rounded-lg px-6">
+                  <div className="bg-[#111] border border-white/8 rounded-lg px-6">
                     {service.faqs.map((faq, index) => (
                       <FaqItem
                         key={index}
@@ -264,7 +266,7 @@ const ServiceDetail = () => {
               className="hidden lg:flex flex-col gap-5 sticky top-24"
             >
               {/* Book CTA card */}
-              <div className="bg-[#111] border border-white/[0.08] rounded-lg p-6">
+              <div className="bg-[#111] border border-white/8 rounded-lg p-6">
                 <p className="font-[family-name:var(--font-display)] font-bold text-[20px] text-white uppercase tracking-[0.02em] mb-2 leading-tight">
                   Book This Service
                 </p>
@@ -303,7 +305,7 @@ const ServiceDetail = () => {
               </div>
 
               {/* Other services card */}
-              <div className="bg-[#111] border border-white/[0.08] rounded-lg p-6">
+              <div className="bg-[#111] border border-white/8 rounded-lg p-6">
                 <p className="font-[family-name:var(--font-display)] font-medium text-[10px] tracking-[0.18em] uppercase text-white/28 mb-4">
                   Other Services
                 </p>
@@ -312,7 +314,7 @@ const ServiceDetail = () => {
                     <li key={s.slug}>
                       <Link
                         to={`/services/${s.slug}`}
-                        className="flex items-center justify-between gap-3 py-2.5 border-b border-white/[0.06] last:border-0 group"
+                        className="flex items-center justify-between gap-3 py-2.5 border-b border-white/6 last:border-0 group"
                       >
                         <span className="font-[family-name:var(--font-body)] text-[13px] text-white/40 group-hover:text-white transition-colors duration-200 leading-snug">
                           {s.fullTitle}

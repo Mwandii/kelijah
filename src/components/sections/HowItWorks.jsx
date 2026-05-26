@@ -33,12 +33,12 @@ const StepCard = ({ step, isLast }) => (
     {!isLast && (
       <div
         aria-hidden="true"
-        className="lg:hidden absolute top-[60px] left-1/2 -translate-x-1/2 w-px h-14 bg-gradient-to-b from-[var(--color-red)] to-transparent"
+        className="lg:hidden absolute top-15 left-1/2 -translate-x-1/2 w-px h-14 bg-linear-to-b from-[var(--color-red)] to-transparent"
       />
     )}
 
     {/* Number circle */}
-    <div className="relative z-10 w-[60px] h-[60px] rounded-full border-2 border-[var(--color-red)] bg-[var(--color-gray-light)] flex items-center justify-center mb-6 shadow-[0_0_0_8px_var(--color-gray-light)]">
+    <div className="relative z-10 w-15 h-15 rounded-full border-2 border-[var(--color-red)] bg-[var(--color-gray-light)] flex items-center justify-center mb-6 shadow-[0_0_0_8px_var(--color-gray-light)]">
       <span className="font-[family-name:var(--font-display)] font-bold text-[20px] text-[var(--color-red)] leading-none">
         {step.num}
       </span>
@@ -74,14 +74,14 @@ const HowItWorks = () => {
             <div className="inline-flex items-center gap-3 mb-4">
               <span
                 aria-hidden="true"
-                className="block w-6 h-[2px] bg-[var(--color-red)]"
+                className="block w-6 h-0.5 bg-[var(--color-red)]"
               />
               <span className="font-[family-name:var(--font-display)] font-medium text-[11px] tracking-[0.24em] uppercase text-[var(--color-red)]">
                 The Process
               </span>
               <span
                 aria-hidden="true"
-                className="block w-6 h-[2px] bg-[var(--color-red)]"
+                className="block w-6 h-0.5 bg-[var(--color-red)]"
               />
             </div>
           </FadeIn>
@@ -106,7 +106,7 @@ const HowItWorks = () => {
           {/* Desktop connector line — sits behind the circles */}
           <div
             aria-hidden="true"
-            className="hidden lg:block absolute top-[30px] left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-[var(--color-red)] via-[var(--color-red-dark)] to-[rgba(224,27,27,0.15)]"
+            className="hidden lg:block absolute top-7.5 left-[12.5%] right-[12.5%] h-px bg-linear-to-r from-[var(--color-red)] via-[var(--color-red-dark)] to-[rgba(224,27,27,0.15)]"
           />
 
           <ol

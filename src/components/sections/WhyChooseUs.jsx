@@ -49,9 +49,9 @@ const WAIcon = () => (
 
 // ── Reason Card ───────────────────────────────────────────────
 const ReasonCard = ({ item }) => (
-  <article className="group bg-[#111111] border border-white/[0.07] rounded-lg p-5 sm:p-6 hover:border-[var(--color-red)] hover:-translate-y-1 transition-all duration-250">
+  <article className="group bg-black-2 border border-white/[0.07] rounded-lg p-5 sm:p-6 hover:border-[var(--color-red)] hover:-translate-y-1 transition-all duration-250">
     {/* Icon */}
-    <div className="w-9 h-9 bg-[rgba(224,27,27,0.12)] rounded-md flex items-center justify-center mb-4 text-[var(--color-red)] transition-colors duration-250 group-hover:bg-[rgba(224,27,27,0.2)]">
+    <div className="w-9 h-9 bg-red-muted rounded-md flex items-center justify-center mb-4 text-[var(--color-red)] transition-colors duration-250 group-hover:bg-[rgba(224,27,27,0.2)]">
       <CheckIcon />
     </div>
 
@@ -108,7 +108,7 @@ const WhyChooseUs = () => {
 
             {/* ── Direct Support Card ── */}
             <FadeIn direction="up" delay={240}>
-              <div className="bg-[#151515] border border-white/[0.08] rounded-lg p-6 sm:p-7">
+              <div className="bg-black-3 border border-white/8 rounded-lg p-6 sm:p-7">
 
                 <p className="font-[family-name:var(--font-display)] font-medium text-[10px] tracking-[0.2em] uppercase text-white/28 mb-2">
                   Direct Support
@@ -126,7 +126,7 @@ const WhyChooseUs = () => {
                 {/* Phone link */}
                 <a
                   href={`tel:${BUSINESS.phone1}`}
-                  className="flex items-center gap-3 bg-[rgba(224,27,27,0.1)] border border-[rgba(224,27,27,0.22)] rounded-md px-4 py-[13px] text-white hover:bg-[rgba(224,27,27,0.18)] transition-colors duration-200 mb-3"
+                  className="flex items-center gap-3 bg-[rgba(224,27,27,0.1)] border border-[rgba(224,27,27,0.22)] rounded-md px-4 py-3.25 text-white hover:bg-[rgba(224,27,27,0.18)] transition-colors duration-200 mb-3"
                 >
                   <PhoneIcon />
                   <span className="font-[family-name:var(--font-display)] font-medium text-[15px] tracking-[0.04em]">

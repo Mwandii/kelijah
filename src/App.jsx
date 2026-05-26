@@ -21,7 +21,7 @@ import Home    from './pages/Home';
 // ── Pages — uncomment as they are built ──────────────────────
 import Services         from './pages/Services';
 import ServiceDetail    from './pages/ServiceDetail';
-// import BookAppointment  from './pages/BookAppointment';
+import BookAppointment  from './pages/BookAppointment';
 
 // ── ScrollToTop ───────────────────────────────────────────────
 // Resets window scroll to top on every route change.
@@ -70,16 +70,7 @@ const App = () => (
         <Route path="/services/:slug" element={<ServiceDetail />} />
 
         {/* Book appointment */}
-        <Route
-          path="/book-appointment"
-          element={
-            <main id="main-content" className="min-h-screen bg-[var(--color-black)] flex items-center justify-center">
-              <p className="text-white/30 font-[family-name:var(--font-display)] text-xl tracking-widest uppercase">
-                Book appointment — coming soon
-              </p>
-            </main>
-          }
-        />
+        <Route path="/book-appointment" element={<BookAppointment />} />
 
         {/* 404 — redirect anything unknown back to home */}
         <Route path="*" element={<Navigate to="/" replace />} />

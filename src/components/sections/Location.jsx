@@ -149,7 +149,7 @@ const Location = () => {
 
           {/* ── Right — Map ── */}
           <FadeIn direction="left" delay={100} threshold={0.1}>
-            <div className="rounded-lg overflow-hidden border border-white/[0.08] w-full h-[320px] sm:h-[400px] lg:h-[480px]">
+            <div className="rounded-lg overflow-hidden border border-white/8 w-full h-80 sm:h-100 lg:h-120">
               {/*
                 Replace the src below with your actual Google Maps embed URL.
                 To get it:

@@ -103,7 +103,7 @@ const Footer = () => {
   return (
     <footer
       role="contentinfo"
-      className="bg-[#070707] border-t border-white/[0.06]"
+      className="bg-[#070707] border-t border-white/6"
     >
       <div className="section-container py-16 sm:py-20">
 
@@ -125,14 +125,14 @@ const Footer = () => {
                 <div className="font-[family-name:var(--font-display)] font-bold text-[15px] text-white tracking-[0.08em] uppercase leading-none">
                   {BUSINESS.shortName}
                 </div>
-                <div className="text-[9px] text-white/28 tracking-[0.14em] uppercase mt-[3px]">
+                <div className="text-[9px] text-white/28 tracking-[0.14em] uppercase mt-0.75">
                   Auto Spares & Garage
                 </div>
               </div>
             </Link>
 
             {/* Tagline */}
-            <p className="font-[family-name:var(--font-body)] text-[13px] text-white/30 leading-[1.88] mb-5 max-w-[240px]">
+            <p className="font-[family-name:var(--font-body)] text-[13px] text-white/30 leading-[1.88] mb-5 max-w-60">
               Nairobi's trusted garage for precision diagnostics, honest
               repairs, and genuine parts.
             </p>
@@ -200,7 +200,7 @@ const Footer = () => {
             <ul className="flex flex-col gap-4">
               {/* Phone 1 */}
               <li className="flex items-center gap-2">
-                <span className="text-[var(--color-red)] shrink-0"><PhoneIcon /></span>
+                <span className="text-red shrink-0"><PhoneIcon /></span>
                 <a
                   href={`tel:${BUSINESS.phone1}`}
                   className="font-[family-name:var(--font-body)] text-[13px] text-white/32 hover:text-white transition-colors duration-200"
@@ -222,7 +222,7 @@ const Footer = () => {
 
               {/* Address */}
               <li className="flex items-start gap-2">
-                <span className="text-[var(--color-red)] shrink-0 mt-[2px]"><MapPinIcon /></span>
+                <span className="text-[var(--color-red)] shrink-0 mt-0.5"><MapPinIcon /></span>
                 <span className="font-[family-name:var(--font-body)] text-[13px] text-white/32 leading-[1.6]">
                   {BUSINESS.address},<br />Nairobi, Kenya
                 </span>
@@ -230,7 +230,7 @@ const Footer = () => {
 
               {/* Hours */}
               <li className="flex items-start gap-2">
-                <span className="text-[var(--color-red)] shrink-0 mt-[2px]"><ClockIcon /></span>
+                <span className="text-[var(--color-red)] shrink-0 mt-0.5"><ClockIcon /></span>
                 <span className="font-[family-name:var(--font-body)] text-[13px] text-white/32 leading-[1.6]">
                   {BUSINESS.hours}
                 </span>
@@ -255,18 +255,10 @@ const Footer = () => {
         {/* ── Bottom bar ── */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="font-[family-name:var(--font-body)] text-[12px] text-white/18">
-            © {currentYear} {BUSINESS.name}. All rights reserved.
+            © {currentYear} {BUSINESS.name}. 
           </p>
           <p className="font-[family-name:var(--font-body)] text-[12px] text-white/18">
-            Built by{' '}
-            <a
-              href="https://github.com/mwandimuinde"
-              target="_blank"
-              rel="noreferrer"
-              className="text-[var(--color-red)] hover:text-[var(--color-red-dark)] transition-colors duration-200"
-            >
-              Athanas Muinde
-            </a>
+            All rights reserved.
           </p>
         </div>
 

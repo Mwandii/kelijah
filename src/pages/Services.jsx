@@ -45,7 +45,7 @@ const ServiceCard = ({ service, index }) => (
       className="group relative flex flex-col bg-[#111] rounded-lg overflow-hidden border border-white/[0.07] hover:border-[var(--color-red)] transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-red)]"
     >
       {/* Image */}
-      <div className="relative overflow-hidden aspect-[16/9]">
+      <div className="relative overflow-hidden aspect-video">
         <LazyImage
           src={service.image}
           alt={service.fullTitle}
@@ -53,7 +53,7 @@ const ServiceCard = ({ service, index }) => (
           className="transition-transform duration-700 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:scale-110"
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-all duration-400 group-hover:from-[rgba(180,10,10,0.7)] group-hover:via-black/30" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent transition-all duration-400 group-hover:from-[rgba(180,10,10,0.7)] group-hover:via-black/30" />
 
         {/* Number badge */}
         <div className="absolute top-3 right-3 bg-[var(--color-red)] px-2.5 py-1 rounded-sm">
@@ -108,7 +108,7 @@ const Services = () => {
         {/* Red left accent */}
         <div
           aria-hidden="true"
-          className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[var(--color-red)] to-transparent"
+          className="absolute left-0 top-0 bottom-0 w-1 bg-linear-to-b from-[var(--color-red)] to-transparent"
         />
 
         <div className="section-container relative z-10">
@@ -121,7 +121,7 @@ const Services = () => {
             </SectionHeading>
           </FadeIn>
           <FadeIn direction="up" delay={180}>
-            <p className="font-[family-name:var(--font-body)] text-[15px] text-white/50 leading-relaxed max-w-[520px]">
+            <p className="font-[family-name:var(--font-body)] text-[15px] text-white/50 leading-relaxed max-w-130">
               From routine oil changes to full engine overhauls — every
               aspect of your vehicle's health covered by certified
               technicians using genuine parts.
@@ -172,7 +172,7 @@ const Services = () => {
                   style={{ fontSize: 'clamp(28px, 4vw, 48px)' }}>
                   Not Sure Which Service You Need?
                 </h2>
-                <p className="font-[family-name:var(--font-body)] text-[15px] text-white/80 max-w-[420px] leading-relaxed">
+                <p className="font-[family-name:var(--font-body)] text-[15px] text-white/80 max-w-105 leading-relaxed">
                   Message us on WhatsApp, describe the issue, and our
                   technicians will advise you — no charge.
                 </p>

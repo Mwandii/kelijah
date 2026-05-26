@@ -67,11 +67,11 @@ const CtaStrip = () => {
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
 
           {/* Left — text */}
-          <div className="max-w-[500px]">
+          <div className="max-w-125">
             <FadeIn direction="up">
               <h2
                 id="cta-heading"
-                className="font-[family-name:var(--font-display)] font-bold text-white uppercase leading-[1.0] tracking-[0.02em] mb-4"
+                className="font-[family-name:var(--font-display)] font-bold text-white uppercase leading-none tracking-[0.02em] mb-4"
                 style={{ fontSize: 'clamp(32px, 5vw, 56px)' }}
               >
                 Ready to Book
@@ -81,7 +81,7 @@ const CtaStrip = () => {
             </FadeIn>
 
             <FadeIn direction="up" delay={100}>
-              <p className="font-[family-name:var(--font-body)] text-[16px] text-white/80 leading-[1.72] max-w-[420px]">
+              <p className="font-[family-name:var(--font-body)] text-[16px] text-white/80 leading-[1.72] max-w-105">
                 Same-day slots available. Walk-ins always welcome.
                 WhatsApp us now and we'll confirm within minutes.
               </p>

@@ -40,7 +40,7 @@ const ServiceCard = ({ service }) => {
     <Link
       to={`/services/${service.slug}`}
       aria-label={`Learn more about ${service.fullTitle}`}
-      className="group relative block overflow-hidden bg-[#111] aspect-[3/4] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-red)]"
+      className="group relative block overflow-hidden bg-[#111] aspect-3/4 focus-visible:outline-2 focus-visible:outline-[var(--color-red)]"
     >
       {/* Image with zoom on hover */}
       <LazyImage
@@ -53,7 +53,7 @@ const ServiceCard = ({ service }) => {
       {/* Base overlay — darkens image for text legibility */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-all duration-400 group-hover:from-[rgba(180,10,10,0.82)] group-hover:via-black/55"
+        className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent transition-all duration-400 group-hover:from-[rgba(180,10,10,0.82)] group-hover:via-black/55"
       />
 
       {/* Card content */}
@@ -94,7 +94,7 @@ const ServiceCard = ({ service }) => {
       {/* Red top accent line — slides in on hover */}
       <div
         aria-hidden="true"
-        className="absolute top-0 left-0 right-0 h-[3px] bg-[var(--color-red)] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
+        className="absolute top-0 left-0 right-0 h-0.75 bg-[var(--color-red)] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
       />
 
     </Link>

@@ -19,7 +19,7 @@ import { BRANDS } from '../../data/siteData';
 const Dot = () => (
   <span
     aria-hidden="true"
-    className="inline-block w-[3px] h-[3px] rounded-full bg-[rgba(224,27,27,0.5)] shrink-0"
+    className="inline-block w-0.75 h-0.75 rounded-full bg-[rgba(224,27,27,0.5)] shrink-0"
   />
 );
 
@@ -31,7 +31,7 @@ const BrandsMarquee = () => {
   return (
     <section
       aria-label="Vehicle brands we service"
-      className="bg-[#111111] border-t border-white/[0.05] border-b border-white/[0.05] py-7 overflow-hidden"
+      className="bg-black-2 border-t border-b border-white/5 py-7 overflow-hidden"
     >
       {/* Label */}
       <p className="font-[family-name:var(--font-display)] font-medium text-[10px] tracking-[0.26em] uppercase text-white/18 text-center mb-4">

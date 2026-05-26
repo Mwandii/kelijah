@@ -12,17 +12,17 @@ export const BUSINESS = {
   name:         "Kelijah Auto Spares & Garage",
   shortName:    "Kelijah",
   tagline:      "Driving Performance. Delivering Reliability.",
-  phone1:       "+254 700 000 000",
+  phone1:       "+254 700 328 044",
   phone2:       "+254 700 000 001",
   email:        "info@kelijahauto.co.ke",
   address:      "Enterprise Road, Industrial Area",
   addressFull:  "Enterprise Road, Industrial Area, Between Dakar & Funzi Rd, Nairobi, Kenya",
   hours:        "Mon – Sat: 8:00 AM – 6:30 PM",
   hoursSunday:  "Sunday: Emergency support available",
-  established:  "2024",
+  established:  "2026",
   city:         "Nairobi, Kenya",
   // WhatsApp — number only, no + or spaces
-  waNumber:     "254700000000",
+  waNumber:     "254700328044",
   // Google Maps embed src — replace with actual embed URL from Google Maps
   mapEmbedSrc:  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.093898986786!2d36.81819571558793!3d-1.2920659999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d22693c689%3A0x5be89fb2f9da77b3!2sNairobi!5e0!3m2!1sen!2ske!4v1680000000000!5m2!1sen!2ske",
 };
@@ -88,7 +88,7 @@ export const SERVICES = [
       { q: "Will I be charged if nothing is found?",       a: "Yes, a diagnostic fee applies regardless — it covers technician time and equipment use. We'll always tell you upfront." },
       { q: "What engine types do you work on?",            a: "Petrol and diesel engines across all major brands — Japanese, European, and American vehicles." },
     ],
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=100",
   },
   {
     slug:      "vehicle-servicing",
@@ -108,7 +108,7 @@ export const SERVICES = [
       { q: "What's included in a full service?",           a: "Oil and filter change, air filter, cabin filter, brake fluid check, tyre pressure, battery test, all fluid top-ups, lights, wipers, and a full inspection report." },
       { q: "Do you use genuine parts?",                    a: "Yes. We use OEM or high-quality aftermarket parts approved for your vehicle's make and model." },
     ],
-    image: "https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=800&q=100",
   },
   {
     slug:      "brake-system",
@@ -128,7 +128,7 @@ export const SERVICES = [
       { q: "How long do brake pads last?",                 a: "Typically 30,000–70,000 km depending on driving style, vehicle weight, and pad quality. City driving wears them faster." },
       { q: "Can I drive with worn brakes?",                a: "No. Worn brakes are a serious safety hazard. If you suspect brake problems, book immediately or drive in." },
     ],
-    image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=100",
   },
   {
     slug:      "suspension-steering",
@@ -148,7 +148,7 @@ export const SERVICES = [
       { q: "Do you do wheel alignment?",                   a: "We check alignment as part of suspension work. For standalone alignment, please call ahead to confirm availability." },
       { q: "Is suspension repair urgent?",                 a: "Yes. Failed suspension components affect vehicle control and can cause tyre blowouts and accidents." },
     ],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=100",
   },
   {
     slug:      "clutch-gearbox",
@@ -168,7 +168,7 @@ export const SERVICES = [
       { q: "Can you repair automatic gearboxes?",          a: "Yes. We work on both manual and automatic transmissions including fluid flushes, solenoid replacements, and full rebuilds." },
       { q: "How long does a clutch replacement take?",     a: "Typically half a day to a full day depending on the vehicle. We'll give you a time estimate when you book." },
     ],
-    image: "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=800&q=100",
   },
   {
     slug:      "electrical-diagnostics",
@@ -188,7 +188,7 @@ export const SERVICES = [
       { q: "What electrical systems do you cover?",        a: "Charging system, starter, lighting, sensors, ECU/TCU, body control modules, CAN bus faults, and wiring harness damage." },
       { q: "My car won't start — is it electrical?",       a: "Often yes. Could be the battery, alternator, starter motor, or an immobiliser fault. Drive in or call us and we'll advise." },
     ],
-    image: "https://images.unsplash.com/photo-1547637589-f54c34f5d7a4?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1547637589-f54c34f5d7a4?w=800&q=100",
   },
   {
     slug:      "battery-services",
@@ -208,7 +208,7 @@ export const SERVICES = [
       { q: "Can I get a battery replaced same day?",       a: "Yes. We carry stock of common battery sizes. Walk in or WhatsApp ahead to confirm availability for your vehicle." },
       { q: "Do you dispose of the old battery?",           a: "Yes. We handle responsible disposal of the old battery at no extra charge." },
     ],
-    image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=800&q=100",
   },
   {
     slug:      "oil-change",
@@ -228,7 +228,7 @@ export const SERVICES = [
       { q: "Does oil grade matter?",                      a: "Absolutely. Using the wrong viscosity can damage engine components. We always use the grade specified by your manufacturer." },
       { q: "How long does an oil change take?",           a: "30–45 minutes for a standard oil change including our complimentary safety check." },
     ],
-    image: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800&q=100",
   },
 ];
 

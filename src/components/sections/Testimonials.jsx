@@ -32,7 +32,7 @@ const StarIcon = ({ filled = true }) => (
 
 // ── Five stars row ────────────────────────────────────────────
 const FiveStars = ({ size = 14 }) => (
-  <div className="flex items-center gap-[3px]" aria-label="5 out of 5 stars">
+  <div className="flex items-center gap-0.75" aria-label="5 out of 5 stars">
     {[...Array(5)].map((_, i) => (
       <StarIcon key={i} filled />
     ))}
@@ -41,7 +41,7 @@ const FiveStars = ({ size = 14 }) => (
 
 // ── Testimonial Card ──────────────────────────────────────────
 const TestimonialCard = ({ testimonial }) => (
-  <article className="group bg-[#111111] border border-white/[0.07] rounded-lg p-7 sm:p-8 flex flex-col gap-5 hover:border-[rgba(224,27,27,0.4)] hover:-translate-y-[3px] transition-all duration-250">
+  <article className="group bg-black-2 border border-white/[0.07] rounded-lg p-7 sm:p-8 flex flex-col gap-5 hover:border-[rgba(224,27,27,0.4)] hover:-translate-y-0.75 transition-all duration-250">
 
     {/* Stars */}
     <FiveStars />
@@ -69,7 +69,7 @@ const TestimonialCard = ({ testimonial }) => (
         <p className="font-[family-name:var(--font-display)] font-600 text-[15px] text-white tracking-[0.04em]">
           {testimonial.name}
         </p>
-        <p className="font-[family-name:var(--font-body)] text-[11px] text-white/28 tracking-[0.08em] uppercase mt-[3px]">
+        <p className="font-[family-name:var(--font-body)] text-[11px] text-white/28 tracking-[0.08em] uppercase mt-0.75">
           {testimonial.tag}
         </p>
       </div>
@@ -109,7 +109,7 @@ const Testimonials = () => {
           {/* Aggregate rating */}
           <FadeIn direction="up" delay={180}>
             <div className="flex flex-col items-start sm:items-end gap-2 shrink-0">
-              <div className="flex items-center gap-[4px]">
+              <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
                   <StarIcon key={i} filled />
                 ))}
@@ -118,7 +118,7 @@ const Testimonials = () => {
                 4.9{' '}
                 <span className="font-normal text-[16px]">/ 5.0</span>
               </p>
-              <p className="font-[family-name:var(--font-body)] text-[11px] text-white/30 tracking-[0.1em] uppercase">
+              <p className="font-[family-name:var(--font-body)] text-[11px] text-white/30 tracking-widest uppercase">
                 Verified Customer Reviews
               </p>
             </div>

@@ -19,7 +19,7 @@ import { TRUST_ITEMS } from '../../data/siteData';
 const Dot = () => (
   <span
     aria-hidden="true"
-    className="inline-block w-[5px] h-[5px] rounded-full bg-white/40 shrink-0"
+    className="inline-block w-1.25 h-1.25 rounded-full bg-white/40 shrink-0"
   />
 );
 
@@ -57,7 +57,7 @@ const TrustMarquee = () => {
   return (
     <section
       aria-label="Trust signals"
-      className="bg-[var(--color-red)] overflow-hidden py-[13px]"
+      className="bg-[var(--color-red)] overflow-hidden py-3.25"
     >
       {/*
         Pause animation on hover — group/hover on wrapper,

@@ -73,25 +73,25 @@ const Hero = () => {
       {/* ── Bottom red gradient fade ── */}
       <div
         aria-hidden="true"
-        className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[rgba(224,27,27,0.12)] to-transparent"
+        className="absolute bottom-0 left-0 right-0 h-40 bg-linear-to-t from-red-muted to-transparent"
       />
 
       {/* ── Red vertical slash accent — desktop only ── */}
       <div
         aria-hidden="true"
-        className="hidden lg:block absolute top-0 bottom-0 w-[5px] bg-gradient-to-b from-[var(--color-red)] via-[var(--color-red-dark)] to-transparent"
+        className="hidden lg:block absolute top-0 bottom-0 w-1.25 bg-linear-to-b from-[var(--color-red)] via-[var(--color-red-dark)] to-transparent"
         style={{ left: '38%', transform: 'skewX(-6deg)', transformOrigin: 'top', opacity: 0.9 }}
       />
       {/* Thin echo line beside the slash */}
       <div
         aria-hidden="true"
-        className="hidden lg:block absolute top-0 bottom-0 w-px bg-gradient-to-b from-[rgba(224,27,27,0.3)] to-transparent"
+        className="hidden lg:block absolute top-0 bottom-0 w-px bg-linear-to-b from-[rgba(224,27,27,0.3)] to-transparent"
         style={{ left: 'calc(38% + 14px)', transform: 'skewX(-6deg)' }}
       />
 
       {/* ── Hero Content ── */}
       <div className="relative z-10 flex-1 flex items-end section-container pb-10 pt-28 lg:pt-36 lg:pb-14">
-        <div className="w-full max-w-[600px]">
+        <div className="w-full max-w-150">
 
           {/* Eyebrow label */}
           <div
@@ -100,7 +100,7 @@ const Hero = () => {
           >
             <span
               aria-hidden="true"
-              className="block w-7 h-[2px] bg-[var(--color-red)] shrink-0"
+              className="block w-7 h-0.5 bg-[var(--color-red)] shrink-0"
             />
             <span className="font-[family-name:var(--font-display)] font-medium text-[11px] tracking-[0.24em] uppercase text-[var(--color-red)]">
               {BUSINESS.city} · Est. {BUSINESS.established}
@@ -131,7 +131,7 @@ const Hero = () => {
 
           {/* Subtext */}
           <p
-            className="text-white/60 font-light leading-relaxed mb-10 max-w-[460px]"
+            className="text-white/60 font-light leading-relaxed mb-10 max-w-115"
             style={{
               fontSize: 'clamp(14px, 1.6vw, 16px)',
               animation: 'heroSlideUp 0.85s cubic-bezier(0.22,0.68,0,1.2) 0.46s both',
@@ -158,7 +158,7 @@ const Hero = () => {
             </Button>
 
             <Button
-              href="/services"
+              href="#services"
               variant="outline-light"
               icon={<ArrowRight />}
             >
@@ -176,7 +176,7 @@ const Hero = () => {
         {/* Red top accent line */}
         <div
           aria-hidden="true"
-          className="h-[2px] bg-gradient-to-r from-[var(--color-red)] via-[var(--color-red-dark)] to-transparent"
+          className="h-0.5 bg-linear-to-r from-[var(--color-red)] via-[var(--color-red-dark)] to-transparent"
         />
 
         <div className="bg-[rgba(12,12,12,0.82)] backdrop-blur-md">
@@ -204,7 +204,7 @@ const Hero = () => {
                   >
                     {stat.number}
                   </dd>
-                  <p className="font-[family-name:var(--font-body)] font-medium text-[10px] tracking-[0.14em] uppercase text-white/30 mt-[6px]">
+                  <p className="font-[family-name:var(--font-body)] font-medium text-[10px] tracking-[0.14em] uppercase text-white/30 mt-1.5">
                     {stat.label}
                   </p>
                 </div>

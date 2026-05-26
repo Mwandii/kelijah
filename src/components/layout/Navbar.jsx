@@ -44,25 +44,25 @@ const WAIcon = () => (
 // ── Hamburger — animated 3-bar → X ───────────────────────────
 const Hamburger = ({ open }) => (
   <div
-    className="flex flex-col justify-center items-center w-6 h-6 gap-[5px]"
+    className="flex flex-col justify-center items-center w-6 h-6 gap-1.25"
     aria-hidden="true"
   >
     <span
       className={[
-        'block h-[2px] w-6 bg-white origin-center transition-all duration-300',
-        open ? 'translate-y-[7px] rotate-45' : '',
+        'block h-0.5 w-6 bg-white origin-center transition-all duration-300',
+        open ? 'translate-y-1.75 rotate-45' : '',
       ].join(' ')}
     />
     <span
       className={[
-        'block h-[2px] bg-white transition-all duration-300',
+        'block h-0.5 bg-white transition-all duration-300',
         open ? 'w-0 opacity-0' : 'w-6 opacity-100',
       ].join(' ')}
     />
     <span
       className={[
-        'block h-[2px] w-6 bg-white origin-center transition-all duration-300',
-        open ? '-translate-y-[7px] -rotate-45' : '',
+        'block h-0.5 w-6 bg-white origin-center transition-all duration-300',
+        open ? '-translate-y-1.75 -rotate-45' : '',
       ].join(' ')}
     />
   </div>
@@ -127,10 +127,10 @@ const Navbar = () => {
       <header
         role="banner"
         className={[
-          'fixed top-0 left-0 right-0 z-50 h-[66px]',
+          'fixed top-0 left-0 right-0 z-50 h-16.5',
           'transition-[background,border,backdrop-filter] duration-300',
           scrolled
-            ? 'bg-[rgba(12,12,12,0.97)] backdrop-blur-md border-b border-white/[0.06]'
+            ? 'bg-[rgba(12,12,12,0.97)] backdrop-blur-md border-b border-white/6'
             : 'bg-transparent',
         ].join(' ')}
       >
@@ -142,14 +142,14 @@ const Navbar = () => {
             aria-label={`${BUSINESS.name} — Home`}
             className="flex items-center gap-3 shrink-0"
           >
-            <div className="w-[38px] h-[38px] bg-[var(--color-red)] rounded-[6px] flex items-center justify-center text-white shrink-0">
+            <div className="w-9.5 h-9.5 bg-[var(--color-red)] rounded-md flex items-center justify-center text-white shrink-0">
               <ToolIcon />
             </div>
             <div className="leading-tight">
               <div className="font-[family-name:var(--font-display)] font-bold text-[16px] text-white tracking-[0.08em] uppercase leading-none">
                 {BUSINESS.shortName}
               </div>
-              <div className="text-[9px] text-white/35 tracking-[0.16em] uppercase mt-[3px]">
+              <div className="text-[9px] text-white/35 tracking-[0.16em] uppercase mt-0.75">
                 Auto Spares & Garage
               </div>
             </div>
@@ -203,7 +203,7 @@ const Navbar = () => {
         className={[
           'fixed inset-0 z-40 lg:hidden',
           'flex flex-col',
-          'bg-[var(--color-black)] pt-[66px]',
+          'bg-[var(--color-black)] pt-16.5',
           'transition-[opacity,transform] duration-300 ease-in-out',
           mobileOpen
             ? 'opacity-100 translate-y-0 pointer-events-auto'
@@ -245,7 +245,7 @@ const Navbar = () => {
 
           {/* Mobile contact info */}
           <div className="mt-auto pt-8 border-t border-white/8">
-            <p className="text-white/30 text-xs tracking-[0.1em] uppercase font-[family-name:var(--font-display)] mb-2">
+            <p className="text-white/30 text-xs tracking-widest uppercase font-[family-name:var(--font-display)] mb-2">
               Call Us
             </p>
             <a
