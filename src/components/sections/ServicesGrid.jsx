@@ -40,7 +40,7 @@ const ServiceCard = ({ service }) => {
     <Link
       to={`/services/${service.slug}`}
       aria-label={`Learn more about ${service.fullTitle}`}
-      className="group relative block overflow-hidden bg-[#111] aspect-3/4 focus-visible:outline-2 focus-visible:outline-[var(--color-red)]"
+      className="group relative block overflow-hidden bg-[#111] aspect-3/4 focus-visible:outline-2 focus-visible:outline-red"
     >
       {/* Image with zoom on hover */}
       <LazyImage
@@ -62,29 +62,29 @@ const ServiceCard = ({ service }) => {
         {/* Service number badge — top right */}
         <div
           aria-hidden="true"
-          className="absolute top-4 right-4 bg-[var(--color-red)] px-2.5 py-1 rounded-sm"
+          className="absolute top-4 right-4 bg-red px-2.5 py-1 rounded-sm"
         >
-          <span className="font-[family-name:var(--font-display)] font-bold text-[10px] tracking-[0.14em] text-white">
+          <span className="font-display font-bold text-[10px] tracking-[0.14em] text-white">
             {service.num}
           </span>
         </div>
 
         {/* Title */}
-        <h3 className="font-[family-name:var(--font-display)] font-bold text-white uppercase leading-tight tracking-[0.02em] mb-2 whitespace-pre-line"
+        <h3 className="font-display font-bold text-white uppercase leading-tight tracking-[0.02em] mb-2 whitespace-pre-line"
           style={{ fontSize: 'clamp(15px, 1.4vw, 18px)' }}
         >
           {service.title}
         </h3>
 
         {/* Description */}
-        <p className="font-[family-name:var(--font-body)] text-[12px] text-white/62 leading-relaxed mb-3">
+        <p className="font-body text-[12px] text-white/62 leading-relaxed mb-3">
           {service.desc}
         </p>
 
         {/* Learn More — slides up on hover */}
         <div
           aria-hidden="true"
-          className="flex items-center gap-2 font-[family-name:var(--font-display)] font-medium text-[11px] tracking-[0.12em] uppercase text-[var(--color-red)] translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+          className="flex items-center gap-2 font-display font-medium text-[11px] tracking-[0.12em] uppercase text-red translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
         >
           Learn More <ArrowRight />
         </div>
@@ -94,7 +94,7 @@ const ServiceCard = ({ service }) => {
       {/* Red top accent line — slides in on hover */}
       <div
         aria-hidden="true"
-        className="absolute top-0 left-0 right-0 h-0.75 bg-[var(--color-red)] scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
+        className="absolute top-0 left-0 right-0 h-0.75 bg-red scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
       />
 
     </Link>
@@ -107,7 +107,7 @@ const ServicesGrid = () => {
     <section
       id="services"
       aria-labelledby="services-heading"
-      className="bg-white pt-[var(--spacing-section)]"
+      className="bg-white pt-(--spacing-section)"
     >
       {/* ── Section header ── */}
       <div className="section-container mb-12">
@@ -132,7 +132,7 @@ const ServicesGrid = () => {
           <FadeIn direction="up" delay={180}>
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 font-[family-name:var(--font-display)] font-medium text-[12px] tracking-[0.14em] uppercase text-[var(--color-red)] border border-[var(--color-red)] px-5 py-3 rounded-sm hover:bg-[var(--color-red)] hover:text-white transition-colors duration-200 whitespace-nowrap self-start sm:self-auto"
+              className="inline-flex items-center gap-2 font-display font-medium text-[12px] tracking-[0.14em] uppercase text-red border border-red px-5 py-3 rounded-sm hover:bg-red hover:text-white transition-colors duration-200 whitespace-nowrap self-start sm:self-auto"
             >
               View All Services <ArrowRight />
             </Link>

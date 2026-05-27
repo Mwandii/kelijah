@@ -125,7 +125,7 @@ const buildMessage = (f) => `Hello Kelijah Auto, I would like to book an appoint
 // ── Field error message ───────────────────────────────────────
 const FieldError = ({ message }) =>
   message ? (
-    <p role="alert" className="mt-1.5 text-[12px] text-[var(--color-red)] font-[family-name:var(--font-body)]">
+    <p role="alert" className="mt-1.5 text-[12px] text-red font-body">
       {message}
     </p>
   ) : null;
@@ -192,25 +192,25 @@ const BookAppointment = () => {
   // ── Success screen ───────────────────────────────────────
   if (status === 'success') {
     return (
-      <main id="main-content" className="bg-[var(--color-black)] min-h-screen flex items-center justify-center px-6">
+      <main id="main-content" className="bg-black min-h-screen flex items-center justify-center px-6">
         <div className="text-center max-w-105">
-          <div className="text-[var(--color-red)] flex justify-center mb-6">
+          <div className="text-red flex justify-center mb-6">
             <CheckCircle />
           </div>
-          <h1 className="font-[family-name:var(--font-display)] font-bold text-white uppercase text-[28px] sm:text-[34px] tracking-[0.02em] mb-4">
+          <h1 className="font-display font-bold text-white uppercase text-[28px] sm:text-[34px] tracking-[0.02em] mb-4">
             WhatsApp Opened!
           </h1>
-          <p className="font-[family-name:var(--font-body)] text-[15px] text-white/52 leading-relaxed mb-8">
+          <p className="font-body text-[15px] text-white/52 leading-relaxed mb-8">
             Your booking details have been pre-filled in WhatsApp. Just hit
             send and we'll confirm your appointment within minutes.
           </p>
-          <p className="font-[family-name:var(--font-body)] text-[13px] text-white/30 mb-8">
+          <p className="font-body text-[13px] text-white/30 mb-8">
             WhatsApp didn't open?{' '}
             <a
               href={buildWALink(buildMessage(form))}
               target="_blank"
               rel="noreferrer"
-              className="text-[var(--color-red)] hover:underline"
+              className="text-red hover:underline"
             >
               Click here to try again
             </a>
@@ -233,7 +233,7 @@ const BookAppointment = () => {
       {/* ── Page header ── */}
       <section
         aria-label="Book appointment header"
-        className="bg-[var(--color-black)] pt-28 pb-14 sm:pt-32 sm:pb-16 border-b border-white/6"
+        className="bg-black pt-28 pb-14 sm:pt-32 sm:pb-16 border-b border-white/6"
       >
         <div className="section-container">
           <FadeIn direction="up">
@@ -245,7 +245,7 @@ const BookAppointment = () => {
             </SectionHeading>
           </FadeIn>
           <FadeIn direction="up" delay={180}>
-            <p className="font-[family-name:var(--font-body)] text-[15px] text-white/48 leading-relaxed max-w-125">
+            <p className="font-body text-[15px] text-white/48 leading-relaxed max-w-125">
               Fill in the form below and we'll open WhatsApp with your
               details pre-filled. We confirm all bookings within minutes.
             </p>
@@ -254,7 +254,7 @@ const BookAppointment = () => {
       </section>
 
       {/* ── Form + Sidebar ── */}
-      <section className="bg-[var(--color-black)] section-padding">
+      <section className="bg-black section-padding">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] xl:grid-cols-[1fr_340px] gap-12 lg:gap-16 items-start">
 
@@ -269,7 +269,7 @@ const BookAppointment = () => {
 
                 {/* ── Personal details ── */}
                 <fieldset className="border-0 p-0 m-0">
-                  <legend className="font-[family-name:var(--font-display)] font-600 text-[11px] tracking-[0.2em] uppercase text-white/30 mb-5 pb-3 border-b border-white/[0.07] w-full">
+                  <legend className="font-display font-600 text-[11px] tracking-[0.2em] uppercase text-white/30 mb-5 pb-3 border-b border-white/[0.07] w-full">
                     Your Details
                   </legend>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -277,7 +277,7 @@ const BookAppointment = () => {
                     {/* Full Name */}
                     <div>
                       <label htmlFor="fullName" className="form-label">
-                        Full Name <span aria-hidden="true" className="text-[var(--color-red)]">*</span>
+                        Full Name <span aria-hidden="true" className="text-red">*</span>
                       </label>
                       <input
                         id="fullName"
@@ -298,7 +298,7 @@ const BookAppointment = () => {
                     {/* Phone */}
                     <div>
                       <label htmlFor="phone" className="form-label">
-                        Phone Number <span aria-hidden="true" className="text-[var(--color-red)]">*</span>
+                        Phone Number <span aria-hidden="true" className="text-red">*</span>
                       </label>
                       <input
                         id="phone"
@@ -321,13 +321,13 @@ const BookAppointment = () => {
 
                 {/* ── Service ── */}
                 <fieldset className="border-0 p-0 m-0">
-                  <legend className="font-[family-name:var(--font-display)] font-600 text-[11px] tracking-[0.2em] uppercase text-white/30 mb-5 pb-3 border-b border-white/[0.07] w-full">
+                  <legend className="font-display font-600 text-[11px] tracking-[0.2em] uppercase text-white/30 mb-5 pb-3 border-b border-white/[0.07] w-full">
                     Requested Service
                   </legend>
 
                   <div>
                     <label htmlFor="service" className="form-label">
-                      Select a Service <span aria-hidden="true" className="text-[var(--color-red)]">*</span>
+                      Select a Service <span aria-hidden="true" className="text-red">*</span>
                     </label>
                     <select
                       id="service"
@@ -352,7 +352,7 @@ const BookAppointment = () => {
 
                 {/* ── Vehicle details ── */}
                 <fieldset className="border-0 p-0 m-0">
-                  <legend className="font-[family-name:var(--font-display)] font-600 text-[11px] tracking-[0.2em] uppercase text-white/30 mb-5 pb-3 border-b border-white/[0.07] w-full">
+                  <legend className="font-display font-600 text-[11px] tracking-[0.2em] uppercase text-white/30 mb-5 pb-3 border-b border-white/[0.07] w-full">
                     Vehicle Details
                   </legend>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -360,7 +360,7 @@ const BookAppointment = () => {
                     {/* Vehicle Make */}
                     <div>
                       <label htmlFor="vehicleMake" className="form-label">
-                        Vehicle Make <span aria-hidden="true" className="text-[var(--color-red)]">*</span>
+                        Vehicle Make <span aria-hidden="true" className="text-red">*</span>
                       </label>
                       <input
                         id="vehicleMake"
@@ -379,7 +379,7 @@ const BookAppointment = () => {
                     {/* Vehicle Model */}
                     <div>
                       <label htmlFor="vehicleModel" className="form-label">
-                        Vehicle Model <span aria-hidden="true" className="text-[var(--color-red)]">*</span>
+                        Vehicle Model <span aria-hidden="true" className="text-red">*</span>
                       </label>
                       <input
                         id="vehicleModel"
@@ -398,7 +398,7 @@ const BookAppointment = () => {
                     {/* Vehicle Year */}
                     <div>
                       <label htmlFor="vehicleYear" className="form-label">
-                        Vehicle Year <span aria-hidden="true" className="text-[var(--color-red)]">*</span>
+                        Vehicle Year <span aria-hidden="true" className="text-red">*</span>
                       </label>
                       <input
                         id="vehicleYear"
@@ -420,7 +420,7 @@ const BookAppointment = () => {
                     <div>
                       <label htmlFor="plateNumber" className="form-label">
                         Plate Number{' '}
-                        <span className="text-white/25 normal-case tracking-normal font-[family-name:var(--font-body)] font-normal text-[11px]">
+                        <span className="text-white/25 normal-case tracking-normal font-body font-normal text-[11px]">
                           (optional)
                         </span>
                       </label>
@@ -439,7 +439,7 @@ const BookAppointment = () => {
                     {/* Preferred Date */}
                     <div className="sm:col-span-2">
                       <label htmlFor="preferredDate" className="form-label">
-                        Preferred Date <span aria-hidden="true" className="text-[var(--color-red)]">*</span>
+                        Preferred Date <span aria-hidden="true" className="text-red">*</span>
                       </label>
                       <input
                         id="preferredDate"
@@ -461,13 +461,13 @@ const BookAppointment = () => {
 
                 {/* ── Issue description ── */}
                 <fieldset className="border-0 p-0 m-0">
-                  <legend className="font-[family-name:var(--font-display)] font-600 text-[11px] tracking-[0.2em] uppercase text-white/30 mb-5 pb-3 border-b border-white/[0.07] w-full">
+                  <legend className="font-display font-600 text-[11px] tracking-[0.2em] uppercase text-white/30 mb-5 pb-3 border-b border-white/[0.07] w-full">
                     Issue Description
                   </legend>
 
                   <div>
                     <label htmlFor="issueDesc" className="form-label">
-                      Describe the issue or service needed <span aria-hidden="true" className="text-[var(--color-red)]">*</span>
+                      Describe the issue or service needed <span aria-hidden="true" className="text-red">*</span>
                     </label>
                     <textarea
                       id="issueDesc"
@@ -509,7 +509,7 @@ const BookAppointment = () => {
                       </>
                     )}
                   </button>
-                  <p className="font-[family-name:var(--font-body)] text-[12px] text-white/25 mt-3">
+                  <p className="font-body text-[12px] text-white/25 mt-3">
                     * Required fields. Your details will be sent directly to our WhatsApp.
                   </p>
                 </div>
@@ -526,7 +526,7 @@ const BookAppointment = () => {
               {/* What to expect */}
               <FadeIn direction="left" delay={100}>
                 <div className="bg-[#111] border border-white/8 rounded-lg p-6">
-                  <p className="font-[family-name:var(--font-display)] font-600 text-[11px] tracking-[0.18em] uppercase text-white/28 mb-4">
+                  <p className="font-display font-600 text-[11px] tracking-[0.18em] uppercase text-white/28 mb-4">
                     What to Expect
                   </p>
                   <ul className="flex flex-col gap-4">
@@ -537,14 +537,14 @@ const BookAppointment = () => {
                       { n:'04', t:'Drive Away Confident', d:'Work completed, tested, and signed off before you leave.' },
                     ].map(step => (
                       <li key={step.n} className="flex gap-3 items-start">
-                        <span className="font-[family-name:var(--font-display)] font-bold text-[11px] text-[var(--color-red)] mt-0.5 shrink-0 w-5">
+                        <span className="font-display font-bold text-[11px] text-red mt-0.5 shrink-0 w-5">
                           {step.n}
                         </span>
                         <div>
-                          <p className="font-[family-name:var(--font-display)] font-600 text-[13px] text-white uppercase tracking-[0.04em] mb-0.5">
+                          <p className="font-display font-600 text-[13px] text-white uppercase tracking-[0.04em] mb-0.5">
                             {step.t}
                           </p>
-                          <p className="font-[family-name:var(--font-body)] text-[12px] text-white/38 leading-relaxed">
+                          <p className="font-body text-[12px] text-white/38 leading-relaxed">
                             {step.d}
                           </p>
                         </div>
@@ -557,27 +557,27 @@ const BookAppointment = () => {
               {/* Contact details */}
               <FadeIn direction="left" delay={180}>
                 <div className="bg-[#111] border border-white/8 rounded-lg p-6">
-                  <p className="font-[family-name:var(--font-display)] font-600 text-[11px] tracking-[0.18em] uppercase text-white/28 mb-4">
+                  <p className="font-display font-600 text-[11px] tracking-[0.18em] uppercase text-white/28 mb-4">
                     Prefer to Call?
                   </p>
                   <a
                     href={`tel:${BUSINESS.phone1}`}
-                    className="flex items-center gap-3 text-white hover:text-[var(--color-red)] transition-colors duration-200 mb-3"
+                    className="flex items-center gap-3 text-white hover:text-red transition-colors duration-200 mb-3"
                   >
                     <PhoneIcon />
-                    <span className="font-[family-name:var(--font-display)] font-600 text-[15px] tracking-[0.04em]">
+                    <span className="font-display font-600 text-[15px] tracking-[0.04em]">
                       {BUSINESS.phone1}
                     </span>
                   </a>
                   <div className="flex items-start gap-3 text-white/35 mb-3">
                     <ClockIcon />
-                    <span className="font-[family-name:var(--font-body)] text-[13px] leading-relaxed">
+                    <span className="font-body text-[13px] leading-relaxed">
                       {BUSINESS.hours}<br/>{BUSINESS.hoursSunday}
                     </span>
                   </div>
                   <div className="flex items-start gap-3 text-white/35">
                     <MapPinIcon />
-                    <span className="font-[family-name:var(--font-body)] text-[13px] leading-relaxed">
+                    <span className="font-body text-[13px] leading-relaxed">
                       {BUSINESS.addressFull}
                     </span>
                   </div>

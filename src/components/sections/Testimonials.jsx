@@ -48,7 +48,7 @@ const TestimonialCard = ({ testimonial }) => (
 
     {/* Quote text */}
     <blockquote className="flex-1">
-      <p className="font-[family-name:var(--font-body)] text-[15px] text-white/74 leading-[1.86] italic">
+      <p className="font-body text-[15px] text-white/74 leading-[1.86] italic">
         "{testimonial.text}"
       </p>
     </blockquote>
@@ -60,16 +60,16 @@ const TestimonialCard = ({ testimonial }) => (
         aria-hidden="true"
         className="w-11 h-11 rounded-full bg-[rgba(224,27,27,0.14)] flex items-center justify-center shrink-0"
       >
-        <span className="font-[family-name:var(--font-display)] font-bold text-[14px] text-[var(--color-red)]">
+        <span className="font-display font-bold text-[14px] text-red">
           {testimonial.initials}
         </span>
       </div>
 
       <div>
-        <p className="font-[family-name:var(--font-display)] font-600 text-[15px] text-white tracking-[0.04em]">
+        <p className="font-display font-600 text-[15px] text-white tracking-[0.04em]">
           {testimonial.name}
         </p>
-        <p className="font-[family-name:var(--font-body)] text-[11px] text-white/28 tracking-[0.08em] uppercase mt-0.75">
+        <p className="font-body text-[11px] text-white/28 tracking-[0.08em] uppercase mt-0.75">
           {testimonial.tag}
         </p>
       </div>
@@ -83,7 +83,7 @@ const Testimonials = () => {
   return (
     <section
       aria-labelledby="testimonials-heading"
-      className="bg-[var(--color-black)] section-padding"
+      className="bg-black section-padding"
     >
       <div className="section-container">
 
@@ -114,11 +114,11 @@ const Testimonials = () => {
                   <StarIcon key={i} filled />
                 ))}
               </div>
-              <p className="font-[family-name:var(--font-display)] font-bold text-[18px] text-white tracking-[0.04em]">
+              <p className="font-display font-bold text-[18px] text-white tracking-[0.04em]">
                 4.9{' '}
                 <span className="font-normal text-[16px]">/ 5.0</span>
               </p>
-              <p className="font-[family-name:var(--font-body)] text-[11px] text-white/30 tracking-widest uppercase">
+              <p className="font-body text-[11px] text-white/30 tracking-widest uppercase">
                 Verified Customer Reviews
               </p>
             </div>

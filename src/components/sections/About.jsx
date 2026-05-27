@@ -41,7 +41,7 @@ const About = () => {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="bg-[var(--color-black)] section-padding"
+      className="bg-black section-padding"
     >
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
@@ -66,22 +66,22 @@ const About = () => {
               {/* Est. badge — bottom right overlap */}
               <div
                 aria-hidden="true"
-                className="absolute -bottom-5 -right-5 z-20 bg-[var(--color-red)] rounded-md px-5 py-4 text-center"
+                className="absolute -bottom-5 -right-5 z-20 bg-red rounded-md px-5 py-4 text-center"
               >
-                <p className="font-[family-name:var(--font-display)] font-bold text-white text-[34px] leading-none">
+                <p className="font-display font-bold text-white text-[34px] leading-none">
                   EST.
                 </p>
-                <p className="font-[family-name:var(--font-display)] font-bold text-white text-[34px] leading-none">
+                <p className="font-display font-bold text-white text-[34px] leading-none">
                   {BUSINESS.established}
                 </p>
               </div>
 
               {/* Floating stat card — top left overlap */}
               <div className="absolute -top-5 -left-5 z-20 bg-[#161616] border border-white/10 rounded-lg px-5 py-4">
-                <p className="font-[family-name:var(--font-display)] font-bold text-[var(--color-red)] text-[26px] leading-none">
+                <p className="font-display font-bold text-red text-[26px] leading-none">
                   100%
                 </p>
-                <p className="font-[family-name:var(--font-body)] text-[10px] text-white/40 tracking-[0.12em] uppercase mt-1">
+                <p className="font-body text-[10px] text-white/40 tracking-[0.12em] uppercase mt-1">
                   Honest Quotes
                 </p>
               </div>
@@ -103,7 +103,7 @@ const About = () => {
               >
                 Built on Trust,{' '}
                 <br />
-                <span className="text-[var(--color-red)]">
+                <span className="text-red">
                   Driven by Precision.
                 </span>
               </SectionHeading>
@@ -134,7 +134,7 @@ const About = () => {
                 {CORE_VALUES.map((value) => (
                   <li
                     key={value}
-                    className="inline-flex items-center gap-2 bg-[rgba(224,27,27,0.08)] border border-[rgba(224,27,27,0.22)] rounded-sm px-3 py-[7px] text-[var(--color-red)] text-[11px] font-[family-name:var(--font-display)] font-medium tracking-[0.1em] uppercase"
+                    className="inline-flex items-center gap-2 bg-[rgba(224,27,27,0.08)] border border-[rgba(224,27,27,0.22)] rounded-sm px-3 py-1.75 text-red text-[11px] font-display font-medium tracking-widest uppercase"
                   >
                     <CheckIcon />
                     {value}

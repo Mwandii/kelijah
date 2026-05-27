@@ -34,7 +34,7 @@ const BrandsMarquee = () => {
       className="bg-black-2 border-t border-b border-white/5 py-7 overflow-hidden"
     >
       {/* Label */}
-      <p className="font-[family-name:var(--font-display)] font-medium text-[10px] tracking-[0.26em] uppercase text-white/18 text-center mb-4">
+      <p className="font-display font-medium text-[10px] tracking-[0.26em] uppercase text-white/18 text-center mb-4">
         Brands We Service
       </p>
 
@@ -50,7 +50,7 @@ const BrandsMarquee = () => {
               key={index}
               className="inline-flex items-center gap-5 px-6"
             >
-              <span className="font-[family-name:var(--font-display)] font-600 text-[13px] tracking-[0.12em] uppercase text-white/22 whitespace-nowrap">
+              <span className="font-display font-600 text-[13px] tracking-[0.12em] uppercase text-white/22 whitespace-nowrap">
                 {brand}
               </span>
               <Dot />

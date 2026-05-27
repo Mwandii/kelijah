@@ -49,19 +49,19 @@ const WAIcon = () => (
 
 // ── Reason Card ───────────────────────────────────────────────
 const ReasonCard = ({ item }) => (
-  <article className="group bg-black-2 border border-white/[0.07] rounded-lg p-5 sm:p-6 hover:border-[var(--color-red)] hover:-translate-y-1 transition-all duration-250">
+  <article className="group bg-black-2 border border-white/[0.07] rounded-lg p-5 sm:p-6 hover:border-red hover:-translate-y-1 transition-all duration-250">
     {/* Icon */}
-    <div className="w-9 h-9 bg-red-muted rounded-md flex items-center justify-center mb-4 text-[var(--color-red)] transition-colors duration-250 group-hover:bg-[rgba(224,27,27,0.2)]">
+    <div className="w-9 h-9 bg-red-muted rounded-md flex items-center justify-center mb-4 text-red transition-colors duration-250 group-hover:bg-[rgba(224,27,27,0.2)]">
       <CheckIcon />
     </div>
 
     {/* Label */}
-    <h3 className="font-[family-name:var(--font-display)] font-600 text-[14px] text-white uppercase tracking-[0.06em] mb-2 leading-snug">
+    <h3 className="font-display font-600 text-[14px] text-white uppercase tracking-[0.06em] mb-2 leading-snug">
       {item.label}
     </h3>
 
     {/* Description */}
-    <p className="font-[family-name:var(--font-body)] text-[13px] text-white/38 leading-[1.76]">
+    <p className="font-body text-[13px] text-white/38 leading-[1.76]">
       {item.desc}
     </p>
   </article>
@@ -72,7 +72,7 @@ const WhyChooseUs = () => {
   return (
     <section
       aria-labelledby="why-heading"
-      className="bg-[var(--color-black)] section-padding"
+      className="bg-black section-padding"
     >
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-start">
@@ -94,12 +94,12 @@ const WhyChooseUs = () => {
                 <br />
                 Standards,
                 <br />
-                <span className="text-[var(--color-red)]">Every Time.</span>
+                <span className="text-red">Every Time.</span>
               </SectionHeading>
             </FadeIn>
 
             <FadeIn direction="up" delay={180}>
-              <p className="font-[family-name:var(--font-body)] text-[15px] text-white/44 leading-[1.85] mb-10">
+              <p className="font-body text-[15px] text-white/44 leading-[1.85] mb-10">
                 We don't just fix cars — we build trust. Every vehicle comes
                 with a transparent report, honest communication, and work
                 that stands behind itself.
@@ -110,15 +110,15 @@ const WhyChooseUs = () => {
             <FadeIn direction="up" delay={240}>
               <div className="bg-black-3 border border-white/8 rounded-lg p-6 sm:p-7">
 
-                <p className="font-[family-name:var(--font-display)] font-medium text-[10px] tracking-[0.2em] uppercase text-white/28 mb-2">
+                <p className="font-display font-medium text-[10px] tracking-[0.2em] uppercase text-white/28 mb-2">
                   Direct Support
                 </p>
 
-                <h3 className="font-[family-name:var(--font-display)] font-bold text-[22px] text-white uppercase tracking-[0.02em] mb-3">
+                <h3 className="font-display font-bold text-[22px] text-white uppercase tracking-[0.02em] mb-3">
                   Need Help Right Now?
                 </h3>
 
-                <p className="font-[family-name:var(--font-body)] text-[13px] text-white/44 leading-[1.76] mb-6">
+                <p className="font-body text-[13px] text-white/44 leading-[1.76] mb-6">
                   Reach our advisors directly for immediate diagnostics,
                   appointment scheduling, or parts support.
                 </p>
@@ -129,7 +129,7 @@ const WhyChooseUs = () => {
                   className="flex items-center gap-3 bg-[rgba(224,27,27,0.1)] border border-[rgba(224,27,27,0.22)] rounded-md px-4 py-3.25 text-white hover:bg-[rgba(224,27,27,0.18)] transition-colors duration-200 mb-3"
                 >
                   <PhoneIcon />
-                  <span className="font-[family-name:var(--font-display)] font-medium text-[15px] tracking-[0.04em]">
+                  <span className="font-display font-medium text-[15px] tracking-[0.04em]">
                     {BUSINESS.phone1}
                   </span>
                 </a>

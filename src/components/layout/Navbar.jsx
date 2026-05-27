@@ -142,11 +142,11 @@ const Navbar = () => {
             aria-label={`${BUSINESS.name} — Home`}
             className="flex items-center gap-3 shrink-0"
           >
-            <div className="w-9.5 h-9.5 bg-[var(--color-red)] rounded-md flex items-center justify-center text-white shrink-0">
+            <div className="w-9.5 h-9.5 bg-red rounded-md flex items-center justify-center text-white shrink-0">
               <ToolIcon />
             </div>
             <div className="leading-tight">
-              <div className="font-[family-name:var(--font-display)] font-bold text-[16px] text-white tracking-[0.08em] uppercase leading-none">
+              <div className="font-display font-bold text-[16px] text-white tracking-[0.08em] uppercase leading-none">
                 {BUSINESS.shortName}
               </div>
               <div className="text-[9px] text-white/35 tracking-[0.16em] uppercase mt-0.75">
@@ -203,7 +203,7 @@ const Navbar = () => {
         className={[
           'fixed inset-0 z-40 lg:hidden',
           'flex flex-col',
-          'bg-[var(--color-black)] pt-16.5',
+          'bg-black pt-16.5',
           'transition-[opacity,transform] duration-300 ease-in-out',
           mobileOpen
             ? 'opacity-100 translate-y-0 pointer-events-auto'
@@ -245,12 +245,12 @@ const Navbar = () => {
 
           {/* Mobile contact info */}
           <div className="mt-auto pt-8 border-t border-white/8">
-            <p className="text-white/30 text-xs tracking-widest uppercase font-[family-name:var(--font-display)] mb-2">
+            <p className="text-white/30 text-xs tracking-widest uppercase font-display mb-2">
               Call Us
             </p>
             <a
               href={`tel:${BUSINESS.phone1}`}
-              className="text-white font-semibold text-base hover:text-[var(--color-red)] transition-colors"
+              className="text-white font-semibold text-base hover:text-red transition-colors"
             >
               {BUSINESS.phone1}
             </a>

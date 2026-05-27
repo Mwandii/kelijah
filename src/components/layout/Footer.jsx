@@ -68,7 +68,7 @@ const SOCIALS = [
 
 // ── Column heading ────────────────────────────────────────────
 const ColHeading = ({ children }) => (
-  <h3 className="font-[family-name:var(--font-display)] font-600 text-[11px] tracking-[0.2em] uppercase text-white mb-5">
+  <h3 className="font-display font-600 text-[11px] tracking-[0.2em] uppercase text-white mb-5">
     {children}
   </h3>
 );
@@ -118,11 +118,11 @@ const Footer = () => {
               aria-label={`${BUSINESS.name} — Home`}
               className="inline-flex items-center gap-3 mb-5"
             >
-              <div className="w-10 h-10 bg-[var(--color-red)] rounded-md flex items-center justify-center text-white shrink-0">
+              <div className="w-10 h-10 bg-red rounded-md flex items-center justify-center text-white shrink-0">
                 <ToolIcon />
               </div>
               <div className="leading-tight">
-                <div className="font-[family-name:var(--font-display)] font-bold text-[15px] text-white tracking-[0.08em] uppercase leading-none">
+                <div className="font-display font-bold text-[15px] text-white tracking-[0.08em] uppercase leading-none">
                   {BUSINESS.shortName}
                 </div>
                 <div className="text-[9px] text-white/28 tracking-[0.14em] uppercase mt-0.75">
@@ -132,13 +132,13 @@ const Footer = () => {
             </Link>
 
             {/* Tagline */}
-            <p className="font-[family-name:var(--font-body)] text-[13px] text-white/30 leading-[1.88] mb-5 max-w-60">
+            <p className="font-body text-[13px] text-white/30 leading-[1.88] mb-5 max-w-60">
               Nairobi's trusted garage for precision diagnostics, honest
               repairs, and genuine parts.
             </p>
 
             {/* Hours blurb */}
-            <p className="font-[family-name:var(--font-display)] font-medium text-[10px] tracking-[0.12em] uppercase text-white/18 mb-6">
+            <p className="font-display font-medium text-[10px] tracking-[0.12em] uppercase text-white/18 mb-6">
               Mon–Sat 8AM–6:30PM · Sunday Emergency
             </p>
 
@@ -152,7 +152,7 @@ const Footer = () => {
                       aria-label={label}
                       target="_blank"
                       rel="noreferrer"
-                      className="w-9 h-9 border border-white/10 rounded-md flex items-center justify-center font-[family-name:var(--font-display)] font-bold text-[10px] text-white/28 hover:border-[var(--color-red)] hover:text-[var(--color-red)] transition-all duration-200"
+                      className="w-9 h-9 border border-white/10 rounded-md flex items-center justify-center font-display font-bold text-[10px] text-white/28 hover:border-red hover:text-red transition-all duration-200"
                     >
                       {abbr}
                     </a>
@@ -203,7 +203,7 @@ const Footer = () => {
                 <span className="text-red shrink-0"><PhoneIcon /></span>
                 <a
                   href={`tel:${BUSINESS.phone1}`}
-                  className="font-[family-name:var(--font-body)] text-[13px] text-white/32 hover:text-white transition-colors duration-200"
+                  className="font-body text-[13px] text-white/32 hover:text-white transition-colors duration-200"
                 >
                   {BUSINESS.phone1}
                 </a>
@@ -211,10 +211,10 @@ const Footer = () => {
 
               {/* Phone 2 */}
               <li className="flex items-center gap-2">
-                <span className="text-[var(--color-red)] shrink-0"><PhoneIcon /></span>
+                <span className="text-red shrink-0"><PhoneIcon /></span>
                 <a
                   href={`tel:${BUSINESS.phone2}`}
-                  className="font-[family-name:var(--font-body)] text-[13px] text-white/32 hover:text-white transition-colors duration-200"
+                  className="font-body text-[13px] text-white/32 hover:text-white transition-colors duration-200"
                 >
                   {BUSINESS.phone2}
                 </a>
@@ -222,16 +222,16 @@ const Footer = () => {
 
               {/* Address */}
               <li className="flex items-start gap-2">
-                <span className="text-[var(--color-red)] shrink-0 mt-0.5"><MapPinIcon /></span>
-                <span className="font-[family-name:var(--font-body)] text-[13px] text-white/32 leading-[1.6]">
+                <span className="text-red shrink-0 mt-0.5"><MapPinIcon /></span>
+                <span className="font-body text-[13px] text-white/32 leading-[1.6]">
                   {BUSINESS.address},<br />Nairobi, Kenya
                 </span>
               </li>
 
               {/* Hours */}
               <li className="flex items-start gap-2">
-                <span className="text-[var(--color-red)] shrink-0 mt-0.5"><ClockIcon /></span>
-                <span className="font-[family-name:var(--font-body)] text-[13px] text-white/32 leading-[1.6]">
+                <span className="text-red shrink-0 mt-0.5"><ClockIcon /></span>
+                <span className="font-body text-[13px] text-white/32 leading-[1.6]">
                   {BUSINESS.hours}
                 </span>
               </li>
@@ -242,7 +242,7 @@ const Footer = () => {
                   href={BUSINESS.mapEmbedSrc}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 font-[family-name:var(--font-display)] font-medium text-[12px] tracking-[0.08em] uppercase text-[var(--color-red)] hover:text-[var(--color-red-dark)] transition-colors duration-200"
+                  className="inline-flex items-center gap-2 font-display font-medium text-[12px] tracking-[0.08em] uppercase text-red hover:text-red-dark transition-colors duration-200"
                 >
                   Open Map <ArrowRight />
                 </a>
@@ -254,10 +254,10 @@ const Footer = () => {
 
         {/* ── Bottom bar ── */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p className="font-[family-name:var(--font-body)] text-[12px] text-white/18">
+          <p className="font-body text-[12px] text-white/18">
             © {currentYear} {BUSINESS.name}. 
           </p>
-          <p className="font-[family-name:var(--font-body)] text-[12px] text-white/18">
+          <p className="font-body text-[12px] text-white/18">
             All rights reserved.
           </p>
         </div>

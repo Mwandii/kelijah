@@ -42,7 +42,7 @@ const MarqueeTrack = () => {
           key={index}
           className="inline-flex items-center gap-4 px-7"
         >
-          <span className="font-[family-name:var(--font-display)] font-medium text-[11px] tracking-[0.2em] uppercase text-white whitespace-nowrap">
+          <span className="font-display font-medium text-[11px] tracking-[0.2em] uppercase text-white whitespace-nowrap">
             {item}
           </span>
           <Dot />
@@ -57,7 +57,7 @@ const TrustMarquee = () => {
   return (
     <section
       aria-label="Trust signals"
-      className="bg-[var(--color-red)] overflow-hidden py-3.25"
+      className="bg-red overflow-hidden py-3.25"
     >
       {/*
         Pause animation on hover — group/hover on wrapper,
@@ -74,7 +74,7 @@ const TrustMarquee = () => {
               aria-hidden="true"
               className="inline-flex items-center gap-4 px-7"
             >
-              <span className="font-[family-name:var(--font-display)] font-medium text-[11px] tracking-[0.2em] uppercase text-white whitespace-nowrap">
+              <span className="font-display font-medium text-[11px] tracking-[0.2em] uppercase text-white whitespace-nowrap">
                 {item}
               </span>
               <Dot />

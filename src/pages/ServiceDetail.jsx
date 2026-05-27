@@ -70,10 +70,10 @@ const FaqItem = ({ faq, isOpen, onToggle }) => (
       aria-expanded={isOpen}
       className="w-full flex items-center justify-between gap-4 py-5 text-left group"
     >
-      <span className="font-[family-name:var(--font-display)] font-600 text-[14px] text-white uppercase tracking-[0.04em] leading-snug group-hover:text-[var(--color-red)] transition-colors duration-200">
+      <span className="font-display font-600 text-[14px] text-white uppercase tracking-[0.04em] leading-snug group-hover:text-red transition-colors duration-200">
         {faq.q}
       </span>
-      <span className={`text-[var(--color-red)] shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
+      <span className={`text-red shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
         <ChevronDown />
       </span>
     </button>
@@ -83,7 +83,7 @@ const FaqItem = ({ faq, isOpen, onToggle }) => (
       className="overflow-hidden transition-all duration-300 ease-in-out"
       style={{ maxHeight: isOpen ? '300px' : '0px' }}
     >
-      <p className="font-[family-name:var(--font-body)] text-[14px] text-white/52 leading-[1.82] pb-5">
+      <p className="font-body text-[14px] text-white/52 leading-[1.82] pb-5">
         {faq.a}
       </p>
     </div>
@@ -94,16 +94,16 @@ const FaqItem = ({ faq, isOpen, onToggle }) => (
 const StepCard = ({ step }) => (
   <div className="flex gap-5 items-start">
     {/* Number */}
-    <div className="w-11 h-11 rounded-full border-2 border-[var(--color-red)] flex items-center justify-center shrink-0 mt-0.5">
-      <span className="font-[family-name:var(--font-display)] font-bold text-[15px] text-[var(--color-red)]">
+    <div className="w-11 h-11 rounded-full border-2 border-red flex items-center justify-center shrink-0 mt-0.5">
+      <span className="font-display font-bold text-[15px] text-red">
         {step.num}
       </span>
     </div>
     <div>
-      <h3 className="font-[family-name:var(--font-display)] font-600 text-[14px] text-white uppercase tracking-[0.06em] mb-2">
+      <h3 className="font-display font-600 text-[14px] text-white uppercase tracking-[0.06em] mb-2">
         {step.title}
       </h3>
-      <p className="font-[family-name:var(--font-body)] text-[13px] text-white/48 leading-[1.78]">
+      <p className="font-body text-[13px] text-white/48 leading-[1.78]">
         {step.desc}
       </p>
     </div>
@@ -139,7 +139,7 @@ const ServiceDetail = () => {
       {/* ── Hero banner ── */}
       <section
         aria-label={`${service.fullTitle} service header`}
-        className="relative bg-[var(--color-black)] pt-[66px] overflow-hidden md:h-175 md:min-h-155 sm:min-h-90 flex flex-col justify-end"
+        className="relative bg-black pt-16.5 overflow-hidden md:h-175 md:min-h-155 sm:min-h-90 flex flex-col justify-end"
       >
         {/* Background image */}
         <LazyImage
@@ -158,26 +158,26 @@ const ServiceDetail = () => {
         {/* Red left accent */}
         <div
           aria-hidden="true"
-          className="absolute left-0 top-0 bottom-0 w-1 bg-[var(--color-red)]"
+          className="absolute left-0 top-0 bottom-0 w-1 bg-red"
         />
 
         <div className="relative z-10 section-container pb-8 pt-10">
           {/* Back link */}
           <Link
             to="/services"
-            className="inline-flex items-center gap-2 font-[family-name:var(--font-display)] font-medium text-[11px] tracking-[0.14em] uppercase text-white/40 hover:text-white transition-colors duration-200 mb-6"
+            className="inline-flex items-center gap-2 font-display font-medium text-[11px] tracking-[0.14em] uppercase text-white/40 hover:text-white transition-colors duration-200 mb-6"
           >
             <BackArrow /> All Services
           </Link>
 
           {/* Service number */}
-          <div className="font-[family-name:var(--font-display)] font-medium text-[11px] tracking-[0.22em] uppercase text-[var(--color-red)] mb-3">
+          <div className="font-display font-medium text-[11px] tracking-[0.22em] uppercase text-red mb-3">
             {service.num} / {String(SERVICES.length).padStart(2, '0')}
           </div>
 
           {/* Title */}
           <h1
-            className="font-[family-name:var(--font-display)] font-bold text-white uppercase leading-[0.95] tracking-[0.01em] max-w-175"
+            className="font-display font-bold text-white uppercase leading-[0.95] tracking-[0.01em] max-w-175"
             style={{ fontSize: 'clamp(28px, 4.5vw, 52px)' }}
           >
             {service.fullTitle}
@@ -186,7 +186,7 @@ const ServiceDetail = () => {
       </section>
 
       {/* ── Main content ── */}
-      <section className="bg-[var(--color-black)] section-padding">
+      <section className="bg-black section-padding">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] xl:grid-cols-[1fr_360px] gap-12 lg:gap-16 items-start">
 
@@ -197,7 +197,7 @@ const ServiceDetail = () => {
               <FadeIn direction="up">
                 <div className="mb-12">
                   <Overline>Overview</Overline>
-                  <p className="font-[family-name:var(--font-body)] text-[15px] text-white/58 leading-[1.9]">
+                  <p className="font-body text-[15px] text-white/58 leading-[1.9]">
                     {service.longDesc}
                   </p>
                 </div>
@@ -218,10 +218,10 @@ const ServiceDetail = () => {
               {/* Book CTA inline — mobile only (sidebar handles desktop) */}
               <FadeIn direction="up" delay={140}>
                 <div className="lg:hidden bg-[#111] border border-white/8 rounded-lg p-6 mb-12">
-                  <p className="font-[family-name:var(--font-display)] font-bold text-[18px] text-white uppercase tracking-[0.02em] mb-2">
+                  <p className="font-display font-bold text-[18px] text-white uppercase tracking-[0.02em] mb-2">
                     Book This Service
                   </p>
-                  <p className="font-[family-name:var(--font-body)] text-[13px] text-white/42 leading-relaxed mb-5">
+                  <p className="font-body text-[13px] text-white/42 leading-relaxed mb-5">
                     Walk in or book via WhatsApp. We'll confirm your slot within minutes.
                   </p>
                   <Button
@@ -234,7 +234,7 @@ const ServiceDetail = () => {
                   </Button>
                   <a
                     href={`tel:${BUSINESS.phone1}`}
-                    className="flex items-center justify-center gap-2 mt-3 font-[family-name:var(--font-display)] font-medium text-[13px] tracking-[0.08em] uppercase text-white/40 hover:text-white transition-colors duration-200"
+                    className="flex items-center justify-center gap-2 mt-3 font-display font-medium text-[13px] tracking-[0.08em] uppercase text-white/40 hover:text-white transition-colors duration-200"
                   >
                     <PhoneIcon /> {BUSINESS.phone1}
                   </a>
@@ -267,10 +267,10 @@ const ServiceDetail = () => {
             >
               {/* Book CTA card */}
               <div className="bg-[#111] border border-white/8 rounded-lg p-6">
-                <p className="font-[family-name:var(--font-display)] font-bold text-[20px] text-white uppercase tracking-[0.02em] mb-2 leading-tight">
+                <p className="font-display font-bold text-[20px] text-white uppercase tracking-[0.02em] mb-2 leading-tight">
                   Book This Service
                 </p>
-                <p className="font-[family-name:var(--font-body)] text-[13px] text-white/42 leading-relaxed mb-5">
+                <p className="font-body text-[13px] text-white/42 leading-relaxed mb-5">
                   Walk in or book via WhatsApp. We'll confirm your slot within minutes.
                 </p>
                 <Button
@@ -284,7 +284,7 @@ const ServiceDetail = () => {
                 {/* Phone */}
                 <a
                   href={`tel:${BUSINESS.phone1}`}
-                  className="flex items-center justify-center gap-2 mt-3 font-[family-name:var(--font-body)] text-[13px] text-white/35 hover:text-white transition-colors duration-200"
+                  className="flex items-center justify-center gap-2 mt-3 font-body text-[13px] text-white/35 hover:text-white transition-colors duration-200"
                 >
                   <PhoneIcon /> {BUSINESS.phone1}
                 </a>
@@ -292,13 +292,13 @@ const ServiceDetail = () => {
                 <div className="border-t border-white/[0.07] my-5" />
                 {/* Hours */}
                 <div className="text-center">
-                  <p className="font-[family-name:var(--font-display)] font-medium text-[10px] tracking-[0.16em] uppercase text-white/25 mb-1">
+                  <p className="font-display font-medium text-[10px] tracking-[0.16em] uppercase text-white/25 mb-1">
                     Working Hours
                   </p>
-                  <p className="font-[family-name:var(--font-body)] text-[13px] text-white/45">
+                  <p className="font-body text-[13px] text-white/45">
                     {BUSINESS.hours}
                   </p>
-                  <p className="font-[family-name:var(--font-body)] text-[12px] text-white/28 mt-1">
+                  <p className="font-body text-[12px] text-white/28 mt-1">
                     {BUSINESS.hoursSunday}
                   </p>
                 </div>
@@ -306,7 +306,7 @@ const ServiceDetail = () => {
 
               {/* Other services card */}
               <div className="bg-[#111] border border-white/8 rounded-lg p-6">
-                <p className="font-[family-name:var(--font-display)] font-medium text-[10px] tracking-[0.18em] uppercase text-white/28 mb-4">
+                <p className="font-display font-medium text-[10px] tracking-[0.18em] uppercase text-white/28 mb-4">
                   Other Services
                 </p>
                 <ul className="flex flex-col gap-1">
@@ -316,10 +316,10 @@ const ServiceDetail = () => {
                         to={`/services/${s.slug}`}
                         className="flex items-center justify-between gap-3 py-2.5 border-b border-white/6 last:border-0 group"
                       >
-                        <span className="font-[family-name:var(--font-body)] text-[13px] text-white/40 group-hover:text-white transition-colors duration-200 leading-snug">
+                        <span className="font-body text-[13px] text-white/40 group-hover:text-white transition-colors duration-200 leading-snug">
                           {s.fullTitle}
                         </span>
-                        <span className="text-white/20 group-hover:text-[var(--color-red)] transition-colors duration-200 shrink-0">
+                        <span className="text-white/20 group-hover:text-red transition-colors duration-200 shrink-0">
                           <ArrowRight />
                         </span>
                       </Link>
@@ -328,7 +328,7 @@ const ServiceDetail = () => {
                 </ul>
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 mt-4 font-[family-name:var(--font-display)] font-medium text-[11px] tracking-[0.12em] uppercase text-[var(--color-red)] hover:text-[var(--color-red-dark)] transition-colors duration-200"
+                  className="inline-flex items-center gap-2 mt-4 font-display font-medium text-[11px] tracking-[0.12em] uppercase text-red hover:text-red-dark transition-colors duration-200"
                 >
                   View All Services <ArrowRight />
                 </Link>

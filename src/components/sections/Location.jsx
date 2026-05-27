@@ -63,19 +63,19 @@ const WAIcon = () => (
 const DetailRow = ({ icon, label, value, sub, isLast = false }) => (
   <div className={`flex items-start gap-4 ${!isLast ? 'pb-7 mb-7 border-b border-white/[0.07]' : ''}`}>
     {/* Icon */}
-    <div className="w-10 h-10 bg-[rgba(224,27,27,0.1)] border border-[rgba(224,27,27,0.2)] rounded-md flex items-center justify-center text-[var(--color-red)] shrink-0 mt-0.5">
+    <div className="w-10 h-10 bg-[rgba(224,27,27,0.1)] border border-[rgba(224,27,27,0.2)] rounded-md flex items-center justify-center text-red shrink-0 mt-0.5">
       {icon}
     </div>
 
     <div>
-      <p className="font-[family-name:var(--font-display)] font-medium text-[10px] tracking-[0.18em] uppercase text-white/22 mb-1">
+      <p className="font-display font-medium text-[10px] tracking-[0.18em] uppercase text-white/22 mb-1">
         {label}
       </p>
-      <p className="font-[family-name:var(--font-display)] font-600 text-[15px] text-white tracking-[0.03em] mb-1">
+      <p className="font-display font-600 text-[15px] text-white tracking-[0.03em] mb-1">
         {value}
       </p>
       {sub && (
-        <p className="font-[family-name:var(--font-body)] text-[13px] text-white/38 leading-[1.6]">
+        <p className="font-body text-[13px] text-white/38 leading-[1.6]">
           {sub}
         </p>
       )}
@@ -89,7 +89,7 @@ const Location = () => {
     <section
       id="location"
       aria-labelledby="location-heading"
-      className="bg-[var(--color-black)] section-padding"
+      className="bg-black section-padding"
     >
       <div className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-16 items-start">

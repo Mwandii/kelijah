@@ -33,24 +33,24 @@ const StepCard = ({ step, isLast }) => (
     {!isLast && (
       <div
         aria-hidden="true"
-        className="lg:hidden absolute top-15 left-1/2 -translate-x-1/2 w-px h-14 bg-linear-to-b from-[var(--color-red)] to-transparent"
+        className="lg:hidden absolute top-15 left-1/2 -translate-x-1/2 w-px h-14 bg-linear-to-b from-red to-transparent"
       />
     )}
 
     {/* Number circle */}
-    <div className="relative z-10 w-15 h-15 rounded-full border-2 border-[var(--color-red)] bg-[var(--color-gray-light)] flex items-center justify-center mb-6 shadow-[0_0_0_8px_var(--color-gray-light)]">
-      <span className="font-[family-name:var(--font-display)] font-bold text-[20px] text-[var(--color-red)] leading-none">
+    <div className="relative z-10 w-15 h-15 rounded-full border-2 border-red bg-gray-light flex items-center justify-center mb-6 shadow-[0_0_0_8px_var(--color-gray-light)]">
+      <span className="font-display font-bold text-[20px] text-red leading-none">
         {step.num}
       </span>
     </div>
 
     {/* Step title */}
-    <h3 className="font-[family-name:var(--font-display)] font-600 text-[13px] text-[var(--color-black)] uppercase tracking-[0.08em] mb-3 leading-snug">
+    <h3 className="font-display font-600 text-[13px] text-black uppercase tracking-[0.08em] mb-3 leading-snug">
       {step.title}
     </h3>
 
     {/* Step description */}
-    <p className="font-[family-name:var(--font-body)] text-[13px] text-[#888] leading-[1.78]">
+    <p className="font-body text-[13px] text-[#888] leading-[1.78]">
       {step.desc}
     </p>
 
@@ -62,7 +62,7 @@ const HowItWorks = () => {
   return (
     <section
       aria-labelledby="how-heading"
-      className="bg-[var(--color-gray-light)] section-padding"
+      className="bg-gray-light section-padding"
     >
       <div className="section-container">
 
@@ -74,14 +74,14 @@ const HowItWorks = () => {
             <div className="inline-flex items-center gap-3 mb-4">
               <span
                 aria-hidden="true"
-                className="block w-6 h-0.5 bg-[var(--color-red)]"
+                className="block w-6 h-0.5 bg-red"
               />
-              <span className="font-[family-name:var(--font-display)] font-medium text-[11px] tracking-[0.24em] uppercase text-[var(--color-red)]">
+              <span className="font-display font-medium text-[11px] tracking-[0.24em] uppercase text-red">
                 The Process
               </span>
               <span
                 aria-hidden="true"
-                className="block w-6 h-0.5 bg-[var(--color-red)]"
+                className="block w-6 h-0.5 bg-red"
               />
             </div>
           </FadeIn>
@@ -92,7 +92,7 @@ const HowItWorks = () => {
               light={false}
             >
               From Booking to{' '}
-              <span className="text-[var(--color-red)]">
+              <span className="text-red">
                 Back on the Road
               </span>
             </SectionHeading>
@@ -106,7 +106,7 @@ const HowItWorks = () => {
           {/* Desktop connector line — sits behind the circles */}
           <div
             aria-hidden="true"
-            className="hidden lg:block absolute top-7.5 left-[12.5%] right-[12.5%] h-px bg-linear-to-r from-[var(--color-red)] via-[var(--color-red-dark)] to-[rgba(224,27,27,0.15)]"
+            className="hidden lg:block absolute top-7.5 left-[12.5%] right-[12.5%] h-px bg-linear-to-r from-red via-red-dark to-[rgba(224,27,27,0.15)]"
           />
 
           <ol

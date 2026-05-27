@@ -40,7 +40,7 @@ const CtaStrip = () => {
   return (
     <section
       aria-labelledby="cta-heading"
-      className="relative bg-[var(--color-red)] py-20 sm:py-24 overflow-hidden"
+      className="relative bg-red py-20 sm:py-24 overflow-hidden"
     >
 
       {/* ── Diagonal texture overlay ── */}
@@ -56,7 +56,7 @@ const CtaStrip = () => {
       {/* ── Large ghosted background text ── */}
       <div
         aria-hidden="true"
-        className="absolute right-0 top-1/2 -translate-y-1/2 font-[family-name:var(--font-display)] font-bold text-[rgba(0,0,0,0.07)] uppercase whitespace-nowrap leading-none select-none pointer-events-none"
+        className="absolute right-0 top-1/2 -translate-y-1/2 font-display font-bold text-[rgba(0,0,0,0.07)] uppercase whitespace-nowrap leading-none select-none pointer-events-none"
         style={{ fontSize: 'clamp(80px, 14vw, 180px)' }}
       >
         BOOK NOW
@@ -71,7 +71,7 @@ const CtaStrip = () => {
             <FadeIn direction="up">
               <h2
                 id="cta-heading"
-                className="font-[family-name:var(--font-display)] font-bold text-white uppercase leading-none tracking-[0.02em] mb-4"
+                className="font-display font-bold text-white uppercase leading-none tracking-[0.02em] mb-4"
                 style={{ fontSize: 'clamp(32px, 5vw, 56px)' }}
               >
                 Ready to Book
@@ -81,7 +81,7 @@ const CtaStrip = () => {
             </FadeIn>
 
             <FadeIn direction="up" delay={100}>
-              <p className="font-[family-name:var(--font-body)] text-[16px] text-white/80 leading-[1.72] max-w-105">
+              <p className="font-body text-[16px] text-white/80 leading-[1.72] max-w-105">
                 Same-day slots available. Walk-ins always welcome.
                 WhatsApp us now and we'll confirm within minutes.
               </p>

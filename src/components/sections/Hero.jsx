@@ -47,7 +47,7 @@ const Hero = () => {
   return (
     <section
       aria-label="Hero — Kelijah Auto Spares & Garage"
-      className="relative min-h-svh flex flex-col overflow-hidden bg-[var(--color-black)]"
+      className="relative min-h-svh flex flex-col overflow-hidden bg-black"
     >
 
       {/* ── Background Image ── */}
@@ -79,7 +79,7 @@ const Hero = () => {
       {/* ── Red vertical slash accent — desktop only ── */}
       <div
         aria-hidden="true"
-        className="hidden lg:block absolute top-0 bottom-0 w-1.25 bg-linear-to-b from-[var(--color-red)] via-[var(--color-red-dark)] to-transparent"
+        className="hidden lg:block absolute top-0 bottom-0 w-1.25 bg-linear-to-b from-red via-red-dark to-transparent"
         style={{ left: '38%', transform: 'skewX(-6deg)', transformOrigin: 'top', opacity: 0.9 }}
       />
       {/* Thin echo line beside the slash */}
@@ -100,16 +100,16 @@ const Hero = () => {
           >
             <span
               aria-hidden="true"
-              className="block w-7 h-0.5 bg-[var(--color-red)] shrink-0"
+              className="block w-7 h-0.5 bg-red shrink-0"
             />
-            <span className="font-[family-name:var(--font-display)] font-medium text-[11px] tracking-[0.24em] uppercase text-[var(--color-red)]">
+            <span className="font-display font-medium text-[11px] tracking-[0.24em] uppercase text-red">
               {BUSINESS.city} · Est. {BUSINESS.established}
             </span>
           </div>
 
           {/* Main headline — white line */}
           <h1
-            className="font-[family-name:var(--font-display)] font-bold uppercase text-white leading-[0.9] tracking-[0.01em]"
+            className="font-display font-bold uppercase text-white leading-[0.9] tracking-[0.01em]"
             style={{
               fontSize: 'clamp(58px, 10vw, 120px)',
               animation: 'heroSlideUp 0.85s cubic-bezier(0.22,0.68,0,1.2) 0.22s both',
@@ -120,7 +120,7 @@ const Hero = () => {
 
           {/* Main headline — red line */}
           <h1
-            className="font-[family-name:var(--font-display)] font-bold uppercase text-[var(--color-red)] leading-[0.9] tracking-[0.01em] mb-8"
+            className="font-display font-bold uppercase text-red leading-[0.9] tracking-[0.01em] mb-8"
             style={{
               fontSize: 'clamp(58px, 10vw, 120px)',
               animation: 'heroSlideUp 0.85s cubic-bezier(0.22,0.68,0,1.2) 0.36s both',
@@ -176,7 +176,7 @@ const Hero = () => {
         {/* Red top accent line */}
         <div
           aria-hidden="true"
-          className="h-0.5 bg-linear-to-r from-[var(--color-red)] via-[var(--color-red-dark)] to-transparent"
+          className="h-0.5 bg-linear-to-r from-red via-red-dark to-transparent"
         />
 
         <div className="bg-[rgba(12,12,12,0.82)] backdrop-blur-md">
@@ -199,12 +199,12 @@ const Hero = () => {
                 >
                   <dt className="sr-only">{stat.label}</dt>
                   <dd
-                    className="font-[family-name:var(--font-display)] font-bold text-[var(--color-red)] leading-none tracking-[0.02em]"
+                    className="font-display font-bold text-red leading-none tracking-[0.02em]"
                     style={{ fontSize: 'clamp(28px, 4vw, 38px)' }}
                   >
                     {stat.number}
                   </dd>
-                  <p className="font-[family-name:var(--font-body)] font-medium text-[10px] tracking-[0.14em] uppercase text-white/30 mt-1.5">
+                  <p className="font-body font-medium text-[10px] tracking-[0.14em] uppercase text-white/30 mt-1.5">
                     {stat.label}
                   </p>
                 </div>
