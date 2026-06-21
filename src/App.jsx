@@ -27,11 +27,46 @@ import BookAppointment  from './pages/BookAppointment';
 // Resets window scroll to top on every route change.
 // Must be inside BrowserRouter to access useLocation.
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
-  }, [pathname]);
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+  }, [pathname, hash]);
+
+  return null;
+};
+
+const ScrollToHash = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+
+    const id = hash.replace("#", "");
+
+    const scrollToElement = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        return true;
+      }
+      return false;
+    };
+
+    // try immediately
+    if (scrollToElement()) return;
+
+    // retry until DOM is ready
+    const interval = setInterval(() => {
+      if (scrollToElement()) {
+        clearInterval(interval);
+      }
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, [hash]);
 
   return null;
 };
@@ -57,6 +92,7 @@ const Layout = ({ children }) => (
 const App = () => (
   <BrowserRouter>
     <ScrollToTop />
+    <ScrollToHash />
     <Layout>
       <Routes>
 
